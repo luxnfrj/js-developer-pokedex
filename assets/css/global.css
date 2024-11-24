@@ -11,7 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #fcd33b;
 }
 
 @media screen and (min-width: 992px) {
@@ -21,4 +21,17 @@ body {
         margin: 1rem auto;
         border-radius: 1rem;
     }
+}
+
+@font-face {
+    font-family: 'FontePokemon';
+    src: url('/assets/fonts/Pokemon Hollow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pokedex-title {
+    font-family: 'FontePokemon', sans-serif;
+    font-size: 3rem;
+    text-align: center;
 }

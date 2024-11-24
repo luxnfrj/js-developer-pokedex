@@ -24,6 +24,7 @@
 
 .electric {
     background-color: #f7cf2e;
+    filter: brightness(1.1);
 }
 
 .ice {
@@ -145,6 +146,12 @@
     border: none;
     border-radius: 1rem;
 }
+
+@media screen and (min-width: 300px) {
+    .pokemons {
+        grid-template-columns: 1fr;
+    }
+  }
 
 @media screen and (min-width: 380px) {
     .pokemons {

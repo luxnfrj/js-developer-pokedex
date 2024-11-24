@@ -7,7 +7,7 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" data-name="${pokemon.name}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -22,6 +22,15 @@ function convertPokemonToLi(pokemon) {
         </li>
     `
 }
+
+pokemonList.addEventListener('click', (event) => {
+    const listItem = event.target.closest('li.pokemon');
+    if (listItem) {
+        const name = listItem.dataset.name;
+        window.location.href = `detalhe.html?name=${name}`; // Corrigido o caminho do arquivo de destino
+    }
+});
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
